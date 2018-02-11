@@ -1,10 +1,10 @@
 # barkslikea.dog
 
-Repository full of the code behind [barkslikea.dog](barkslikea.dog)
+Repository full of the code behind [barkslikea.dog](http://barkslikea.dog)
 
 Could really be used to run any novelty site like it, just need to know a couple things:
 
-- It reads a subdomain to determine who to put at the bottom. Therefore, [madison.barkslikea.dog](madison.barkslikea.dog) will show `madison`
+- It reads a subdomain to determine who to put at the bottom. Therefore, [madison.barkslikea.dog](http://madison.barkslikea.dog) will show `madison`
 - It relies on [punycode.js](https://github.com/bestiejs/punycode.js/), distributed through the Cloudflare CDN (thanks Cloudflare <3)
 - Also relies on the great Bootstrap (v4 beta), just because it looks nice. And I'm not a designer. 
 

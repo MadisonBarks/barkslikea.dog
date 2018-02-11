@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>bark</title>
+  </head>
+  <body>
+    <div class="container">
+        <br />
+        <h1 id="bork">Bark bark bark bark bark.</h1>
+
+        <h3 id="doggosName"></h3>
+    </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.min.js" integrity="sha256-I5XOWZu6gbewMSB9UR88y0GmiJi9AsQcCzUpA/MBNnA=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var customResponses = {
+        dexy: "nut nut nut nut nut",
+        nekocentral: "nyah nyah nyah?", //*sighs* just why Marcel
+        crystal: "Awoooooooooo *$350 fine*",
+        madison: "awowo"
+      }
+      var hostnamePieces = window.location.host.split(":")[0].split(".");
+      var doggosName = ""
+      if(hostnamePieces.length == 2 || hostnamePieces.length == 1) {
+        doggosName = "You"
+      }
+      else {
+        doggosName = hostnamePieces[0];
+      }
+      doggosName = punycode.toUnicode(doggosName);
+
+      document.getElementById("doggosName").textContent = "- " + doggosName;
+      if(customResponses[doggosName]) {
+        document.getElementById("bork").textContent = customResponses[doggosName];
+      }
+    </script>
+  </body>
+</html>
